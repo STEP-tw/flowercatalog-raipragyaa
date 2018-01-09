@@ -1,0 +1,29 @@
+body{
+  margin:50px;
+}
+h1{
+  text-align: center;
+  font-size: 50px;
+}
+h2{
+  border-top:  2px solid blue;
+  border-bottom: 5px solid lightBlue;
+  text-align: right;
+  font-size: 40px;
+  padding: 20px;
+  color: orange;
+}
+
+
+#flower{
+  border: 1px solid black;
+  height: 60%;
+  width:70%;
+}
+#pageReferances{
+  margin-right:200px;
+  margin-top:200px;
+  float:right;
+  font-size: 20px;
+  top:40px;
+}
