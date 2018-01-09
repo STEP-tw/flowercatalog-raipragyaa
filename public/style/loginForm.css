@@ -1,0 +1,20 @@
+body{
+  margin:20px;
+}
+h1 {
+  text-align: center;
+  color: orange;
+  border-bottom: 4px solid lightblue;
+  padding-bottom: 10px;
+  font-size: 40px;
+}
+
+#fName{
+  height: 20px;
+  width: 150px;
+}
+
+#lastName{
+  height: 20px;
+  width: 150px;
+}
