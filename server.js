@@ -7,6 +7,19 @@ const redirectToGuestBook = require('./fileHandler.js').redirectToGuestBook;
 
 const app = webApp.create();
 
+let toS = o=>JSON.stringify(o,null,2);
+
+let logRequest = (req,res)=>{
+  let text = ['------------------------------',
+    `${req.method} ${req.url}`,
+    `HEADERS=> ${toS(req.headers)}`,
+    `COOKIES=> ${toS(req.cookies)}`,
+    `BODY=> ${toS(req.body)}`,''].join('\n');
+  fs.appendFile('request.txt',text,()=>{});
+  console.log(`${req.method} ${req.url}`);
+}
+
+
 app.get('/',redirectToHome);
 app.post('/guestBook',redirectToGuestBook);
 app.useAsPostProcessor(readCommonFiles);

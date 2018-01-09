@@ -65,7 +65,6 @@ let urlIsOneOf = function(urls) {
 };
 
 const main = function(req, res) {
-  console.log(req.url);
   req.fs = require('fs');
   res.redirect = redirect.bind(res);
   req.urlIsOneOf = urlIsOneOf.bind(req);
