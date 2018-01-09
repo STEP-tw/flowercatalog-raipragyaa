@@ -65,7 +65,7 @@ let urlIsOneOf = function(urls) {
 };
 
 const main = function(req, res) {
-  // console.log(req.headers);
+  console.log(req.url);
   req.fs = require('fs');
   res.redirect = redirect.bind(res);
   req.urlIsOneOf = urlIsOneOf.bind(req);
@@ -77,7 +77,7 @@ const main = function(req, res) {
     content = "";
     this._preprocess.forEach(middleware => {
       if (res.finished) return;
-      middleware(req, res);
+      middleware(req,res);
     });
     if (res.finished) return;
     invoke.call(this, req, res);
