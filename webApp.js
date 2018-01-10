@@ -65,7 +65,6 @@ let urlIsOneOf = function(urls) {
 };
 
 const main = function(req, res) {
-  req.fs = require('fs');
   res.redirect = redirect.bind(res);
   req.urlIsOneOf = urlIsOneOf.bind(req);
   req.cookies = parseCookies(req.headers.cookie || '');
